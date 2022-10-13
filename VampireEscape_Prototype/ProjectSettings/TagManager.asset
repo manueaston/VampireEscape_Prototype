@@ -41,3 +41,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Secondary_FOW
+    uniqueID: 2564562585
+    locked: 1
