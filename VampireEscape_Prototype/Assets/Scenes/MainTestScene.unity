@@ -537,6 +537,7 @@ GameObject:
   - component: {fileID: 1140880084}
   - component: {fileID: 1140880086}
   - component: {fileID: 1140880085}
+  - component: {fileID: 1140880087}
   m_Layer: 0
   m_Name: BaseLayer
   m_TagString: Untagged
@@ -607,7 +608,7 @@ TilemapRenderer:
   m_SortOrder: 0
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
-  m_MaskInteraction: 1
+  m_MaskInteraction: 0
 --- !u!1839735485 &1140880086
 Tilemap:
   m_ObjectHideFlags: 0
@@ -1052,6 +1053,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1140880087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140880083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ba2bb63941ae74f88509e4f6176cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1654881610
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,6 +1079,7 @@ GameObject:
   - component: {fileID: 1654881613}
   - component: {fileID: 1654881612}
   - component: {fileID: 1654881616}
+  - component: {fileID: 1654881617}
   m_Layer: 6
   m_Name: Collideable
   m_TagString: Untagged
@@ -1235,7 +1249,7 @@ TilemapRenderer:
   m_SortOrder: 0
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
-  m_MaskInteraction: 1
+  m_MaskInteraction: 0
 --- !u!1839735485 &1654881616
 Tilemap:
   m_ObjectHideFlags: 0
@@ -1740,6 +1754,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1654881617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654881610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ba2bb63941ae74f88509e4f6176cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1783621241 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 905871858009382265, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
