@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0.0f, 0.0f);
                     moveCount++;
-                    Debug.Log(moveCount);
+                  ///  Debug.Log(moveCount);
                 }
             }
             else if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1.0f)
