@@ -9,8 +9,8 @@ public class MoveManager : MonoBehaviour
 
     public Text moveCounterText;
 
-    int currentMoves;
-    int maxMoves;
+    public int currentMoves;
+    public int maxMoves;
 
     private void Awake()
     {
