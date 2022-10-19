@@ -9,6 +9,10 @@ public class MoveManager : MonoBehaviour
 
     public Text moveCounterText;
 
+    public Image bloodMeterImage;
+    public Sprite[] bloodMeter;
+    // array contains all sprites of blood meter
+
     public int currentMoves;
     public int maxMoves;
 
@@ -24,17 +28,23 @@ public class MoveManager : MonoBehaviour
         maxMoves = 20;
 
         moveCounterText.text = "Move " + currentMoves.ToString() + "/" + maxMoves.ToString();
+        bloodMeterImage.sprite = bloodMeter[0];
     }
 
     public void AddMove()
     {
         currentMoves++;
         moveCounterText.text = "Move " + currentMoves.ToString() + "/" + maxMoves.ToString();
+
+        // Calculates which blood meter image to use based on current move percentage out of max moves
+        int bloodMeterIndex = (9 * currentMoves) / maxMoves;
+        bloodMeterImage.sprite = bloodMeter[bloodMeterIndex];
     }
 
     public void Reset()
     {
         currentMoves = 0;
         moveCounterText.text = "Move " + currentMoves.ToString() + "/" + maxMoves.ToString();
+        bloodMeterImage.sprite = bloodMeter[0];
     }
 }
