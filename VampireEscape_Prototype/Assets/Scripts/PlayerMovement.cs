@@ -11,13 +11,12 @@ public class PlayerMovement : MonoBehaviour
     [Range(0, 5)]
     public float sightDistance;
     public float checkInterval;
-
-
     //_____________________________________________________
 
 
     public float moveSpeed = 5.0f;
     public Transform movePoint;
+    public Vector3 startPoint;
 
     public LayerMask whatStopsMovement;
 
@@ -31,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
         secondaryFogOfWar.localScale = new Vector2(sightDistance, sightDistance) * 10f;
         //_____________________________________________
         movePoint.parent = null;
+        startPoint = transform.position;
     }
 
     // Update is called once per frame
@@ -68,6 +68,16 @@ public class PlayerMovement : MonoBehaviour
         }  
     }
 
+    public void Reset()
+    {
+        MoveManager.instance.Reset();
+        Debug.Log("Function called");
+
+        // Reset movement not working
+        movePoint.position = startPoint;
+        transform.position = startPoint;
+        //
+    }
 
 
     //Added Coding from Nathan for FOW

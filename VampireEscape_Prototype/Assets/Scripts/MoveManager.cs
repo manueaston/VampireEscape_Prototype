@@ -31,4 +31,10 @@ public class MoveManager : MonoBehaviour
         currentMoves++;
         moveCounterText.text = "Move " + currentMoves.ToString() + "/" + maxMoves.ToString();
     }
+
+    public void Reset()
+    {
+        currentMoves = 0;
+        moveCounterText.text = "Move " + currentMoves.ToString() + "/" + maxMoves.ToString();
+    }
 }
