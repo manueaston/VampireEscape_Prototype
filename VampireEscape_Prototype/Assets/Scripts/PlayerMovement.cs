@@ -73,10 +73,10 @@ public class PlayerMovement : MonoBehaviour
         MoveManager.instance.Reset();
         Debug.Log("Function called");
 
-        // Reset movement not working
+       
         movePoint.position = startPoint;
         transform.position = startPoint;
-        //
+        
     }
 
 
