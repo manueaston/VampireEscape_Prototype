@@ -71,9 +71,6 @@ public class PlayerMovement : MonoBehaviour
     public void Reset()
     {
         MoveManager.instance.Reset();
-        Debug.Log("Function called");
-
-       
         movePoint.position = startPoint;
         transform.position = startPoint;
         
