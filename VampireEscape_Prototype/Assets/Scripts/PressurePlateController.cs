@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PressurePlateController : MonoBehaviour
 {
    public bool SteppedOn;
+   public UnityEvent LinkedObject;
 
    public void Stepped()
    {
@@ -13,6 +15,7 @@ public class PressurePlateController : MonoBehaviour
 
            SteppedOn = true;
            Debug.Log("PressurePlate stepped on trigger door/trap");
+           LinkedObject.Invoke();
        }
    }
 }

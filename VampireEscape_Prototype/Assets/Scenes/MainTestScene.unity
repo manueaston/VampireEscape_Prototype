@@ -470,17 +470,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 905871858009382265, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
   m_PrefabInstance: {fileID: 7922899890492063421}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1783621242 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8175189629413135785, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
-  m_PrefabInstance: {fileID: 7922899890492063421}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1783621241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9d927e7b99ceda43a681cde9df3eaeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1783621246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,10 +486,10 @@ MonoBehaviour:
   InteractAction:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1783621242}
-        m_TargetAssemblyTypeName: PressurePlateController, Assembly-CSharp
-        m_MethodName: Stepped
-        m_Mode: 1
+      - m_Target: {fileID: 905871858009382265, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -509,6 +498,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1783621250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783621241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9d927e7b99ceda43a681cde9df3eaeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SteppedOn: 0
+  LinkedObject:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2042038721 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5756311197042030656, guid: 9d37da3d6149f33498dc57d3d6955170, type: 3}
@@ -769,11 +774,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2358050476443840095, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.53
+      value: 1.499
       objectReference: {fileID: 0}
     - target: {fileID: 2358050476443840095, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.52
+      value: 1.484
       objectReference: {fileID: 0}
     - target: {fileID: 2358050476443840095, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -817,7 +822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3170994633473930749, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
       propertyPath: m_MaskInteraction
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7197707275614698580, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
       propertyPath: m_IsTrigger
