@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 2358050476443840095}
   - component: {fileID: 3170994633473930749}
   - component: {fileID: 7197707275614698580}
-  - component: {fileID: 8175189629413135785}
+  - component: {fileID: 4172230600899280461}
+  - component: {fileID: -3311136574613001650}
   m_Layer: 0
   m_Name: PressurePlate
   m_TagString: Untagged
@@ -112,7 +113,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.2}
   m_EdgeRadius: 0
---- !u!114 &8175189629413135785
+--- !u!114 &4172230600899280461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905871858009382265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76753ed15e8355642b90be166b963559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInRange: 0
+  InteractAction:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &-3311136574613001650
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,3 +142,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SteppedOn: 0
+  LinkedObject:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -3311136574613001650}
+        m_TargetAssemblyTypeName: PressurePlateController, Assembly-CSharp
+        m_MethodName: Stepped
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
