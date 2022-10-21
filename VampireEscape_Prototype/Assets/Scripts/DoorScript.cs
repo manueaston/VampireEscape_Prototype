@@ -4,25 +4,37 @@ using UnityEngine;
 
 public class DoorScript : MonoBehaviour
 {
-    public bool IsDoorOpen;
+    public bool doorOpen;
 
     public void Start()
     {
         gameObject.SetActive(false);
     }
+
     public void OpenDoor()
     {
-        if(!IsDoorOpen)
+        if(!doorOpen)
         {
-            IsDoorOpen = true;
+            doorOpen = true;
             gameObject.SetActive(true);
               
         }
     }
 
-    public void Reset()
+    //public void Reset()
+    //{
+    //    doorOpen = false;
+    //    gameObject.SetActive(false);
+    //}
+
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        IsDoorOpen = false;
-        gameObject.SetActive(false);
+        if (doorOpen)
+        {
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                Debug.Log("Player At Door");
+            }
+        }
     }
 }
