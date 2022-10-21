@@ -21,11 +21,11 @@ public class DoorScript : MonoBehaviour
         }
     }
 
-    public void Reset()
-    {
-        doorOpen = false;
-        gameObject.SetActive(false);
-    }
+    //public void Reset()
+    //{
+    //    doorOpen = false;
+    //    gameObject.SetActive(false);
+    //}
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
