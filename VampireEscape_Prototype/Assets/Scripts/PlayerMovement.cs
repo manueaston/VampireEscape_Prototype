@@ -4,16 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //Fog of War (FOW) Variables and declarations section
-    //_____________________________________________________
-    public FogOfWar fogOfWar;
-    public Transform secondaryFogOfWar;
-    [Range(0, 5)]
-    public float sightDistance;
-    public float checkInterval;
-    //_____________________________________________________
-
-
     public float moveSpeed = 5.0f;
     public Transform movePoint;
     public Vector3 startPoint;
@@ -25,10 +15,6 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        //FOW code
-        StartCoroutine(CheckFogOfWar(checkInterval));
-        secondaryFogOfWar.localScale = new Vector2(sightDistance, sightDistance) * 10f;
-        //_____________________________________________
         movePoint.parent = null;
         startPoint = transform.position;
     }
@@ -70,24 +56,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void Reset()
     {
+        Debug.Log("success");
         MoveManager.instance.Reset();
         movePoint.position = startPoint;
         transform.position = startPoint;
-        
     }
-
-
-    //Added Coding from Nathan for FOW
-    //Note this is still in experimental phase.
-
-    private IEnumerator CheckFogOfWar(float checkInterval)
-    {
-        while(true)
-        {
-            fogOfWar.MakeHole(transform.position, sightDistance);
-            yield return new WaitForSeconds(checkInterval);
-
-        }
-    }
-
 }
