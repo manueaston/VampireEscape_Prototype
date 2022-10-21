@@ -9,11 +9,18 @@ public class InteractableScript : MonoBehaviour
    // public KeyCode InteractKey;
     public UnityEvent InteractAction;
     // Start is called before the first frame   
-   
+    void Start()
+    {
+        
+    }
 
     // Update is called once per frame
     void Update()
     {
+        if (isInRange)//if we are in range to interact
+        {
+            InteractAction.Invoke();
+        }
 
            
     }
@@ -22,8 +29,7 @@ public class InteractableScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = true;
-            //Debug.Log("Player is on " + gameObject);
-            InteractAction.Invoke();
+            Debug.Log("Player is on " + gameObject);
         } 
     }
 
@@ -33,7 +39,8 @@ public class InteractableScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = false;
-           // Debug.Log("Player is off " + gameObject);
+            Debug.Log("Player is off " + gameObject);
+            InteractAction.Invoke();
         }
     }
 }
