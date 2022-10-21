@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class DoorScript : MonoBehaviour
 {
-    public bool doorOpen;
+    //public bool doorOpen;
 
-    public void Start()
-    {
-        gameObject.SetActive(false);
-    }
+    //public void Start()
+    //{
+    //    gameObject.SetActive(false);
+    //}
 
-    public void OpenDoor()
-    {
-        if(!doorOpen)
-        {
-            doorOpen = true;
-            gameObject.SetActive(true);
+    //public void OpenDoor()
+    //{
+    //    if(!doorOpen)
+    //    {
+    //        doorOpen = true;
+    //        gameObject.SetActive(true);
               
-        }
-    }
+    //    }
+    //}
 
     //public void Reset()
     //{
@@ -29,12 +29,10 @@ public class DoorScript : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (doorOpen)
+       
+        if (collision.gameObject.CompareTag("Player"))
         {
-            if (collision.gameObject.CompareTag("Player"))
-            {
-                Debug.Log("Player At Door");
-            }
+            Debug.Log("Player At Door");
         }
     }
 }

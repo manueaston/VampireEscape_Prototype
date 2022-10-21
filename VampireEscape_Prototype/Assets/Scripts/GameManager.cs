@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     public GameObject[] doors;
 
+    public int levelMaxMoves;
+
     public void Reset()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
