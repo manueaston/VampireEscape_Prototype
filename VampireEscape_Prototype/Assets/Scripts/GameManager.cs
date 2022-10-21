@@ -21,4 +21,10 @@ public class GameManager : MonoBehaviour
         //    door.GetComponent<DoorScript>().Reset();
         //}
     }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(0);
+    }
+
 }
