@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoorScript : MonoBehaviour
 {
+    public int nextLevelIndex;
+
     //public bool doorOpen;
 
     //public void Start()
@@ -32,6 +35,7 @@ public class DoorScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Player At Door");
+            SceneManager.LoadScene(nextLevelIndex);
         }
     }
 }
