@@ -25,7 +25,6 @@ public class MoveManager : MonoBehaviour
     void Start()
     {
         currentMoves = 0;
-        maxMoves = 20;
 
         moveCounterText.text = "Move " + currentMoves.ToString() + "/" + maxMoves.ToString();
         bloodMeterImage.sprite = bloodMeter[0];
@@ -41,10 +40,10 @@ public class MoveManager : MonoBehaviour
         bloodMeterImage.sprite = bloodMeter[bloodMeterIndex];
     }
 
-    public void Reset()
-    {
-        currentMoves = 0;
-        moveCounterText.text = "Move " + currentMoves.ToString() + "/" + maxMoves.ToString();
-        bloodMeterImage.sprite = bloodMeter[0];
-    }
+    //public void Reset()
+    //{
+    //    currentMoves = 0;
+    //    moveCounterText.text = "Move " + currentMoves.ToString() + "/" + maxMoves.ToString();
+    //    bloodMeterImage.sprite = bloodMeter[0];
+    //}
 }

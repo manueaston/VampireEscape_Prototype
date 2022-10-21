@@ -332,6 +332,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6029701011689199226, guid: 142dfbda24021254bbfe5350beef30c1, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6029701011689199226, guid: 142dfbda24021254bbfe5350beef30c1, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6029701011689199226, guid: 142dfbda24021254bbfe5350beef30c1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -3363010691048286261, guid: 142dfbda24021254bbfe5350beef30c1, type: 3}
       propertyPath: m_SortingLayer
       value: 0
@@ -350,11 +362,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4434157831335234732, guid: 142dfbda24021254bbfe5350beef30c1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.495
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4434157831335234732, guid: 142dfbda24021254bbfe5350beef30c1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.553
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 4434157831335234732, guid: 142dfbda24021254bbfe5350beef30c1, type: 3}
       propertyPath: m_LocalPosition.z
