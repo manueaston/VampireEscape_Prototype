@@ -278,7 +278,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 484010724431189680, guid: a76f5552664378542951deea55101610, type: 3}
+      - m_Target: {fileID: 484010724431189680, guid: 46049810868b12f4cbc7e9dce6643446, type: 3}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
         m_MethodName: Reset
         m_Mode: 1
@@ -498,15 +498,15 @@ MonoBehaviour:
   moveCounterText: {fileID: 8890551944407867798}
   bloodMeterImage: {fileID: 536965258997678026}
   bloodMeter:
-  - {fileID: 21300000, guid: f09d51341fca55c458e6fe85f024436b, type: 3}
-  - {fileID: 21300000, guid: 8bfdd101d3bd0824794113659773fbd3, type: 3}
-  - {fileID: 21300000, guid: e3044f1ce41396f49920d061fa0911cc, type: 3}
-  - {fileID: 21300000, guid: c5f45bd2b91bce347aa57e740d1cd980, type: 3}
-  - {fileID: 21300000, guid: b7cd4a81bc05cad4ba4562c64809cd11, type: 3}
-  - {fileID: 21300000, guid: 28d01dde7ff918d4fb06375dc506ebf8, type: 3}
-  - {fileID: 21300000, guid: 431623ca249341249be2c4508994a9db, type: 3}
-  - {fileID: 21300000, guid: d8058cdeba9e86e4f94b71f84fa14181, type: 3}
-  - {fileID: 21300000, guid: 9774a5b6e9c57bc49b861084f50e1f60, type: 3}
-  - {fileID: 21300000, guid: 3ac610203ec1d3240911b99752474122, type: 3}
+  - {fileID: 21300000, guid: 97fdb5cf02b5e954abe2176baa58d273, type: 3}
+  - {fileID: 21300000, guid: 42e45973f6b4dfb4b86e8f57f913699b, type: 3}
+  - {fileID: 21300000, guid: 4255c32ff8a7bd945ae56fb8ed604e94, type: 3}
+  - {fileID: 21300000, guid: aaa06f064059eb14c810117dd32f6a9e, type: 3}
+  - {fileID: 21300000, guid: 0745a3e7cf239c044b76fb9fe716dcb7, type: 3}
+  - {fileID: 21300000, guid: 7c3af978fbd59bd4e9b53c0ca6fcf30b, type: 3}
+  - {fileID: 21300000, guid: 14f2f0113b9cf77478a3f0eb0ca77ce8, type: 3}
+  - {fileID: 21300000, guid: 821527c6681f6ee4ab734397f1be2d7e, type: 3}
+  - {fileID: 21300000, guid: f2a409514e81fea42af5390eeaff8825, type: 3}
+  - {fileID: 21300000, guid: f87afe35fd86b554f8810a767ac19932, type: 3}
   currentMoves: 0
   maxMoves: 0
