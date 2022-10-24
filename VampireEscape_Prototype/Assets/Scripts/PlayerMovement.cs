@@ -54,11 +54,11 @@ public class PlayerMovement : MonoBehaviour
         }  
     }
 
-    public void Reset()
-    {
-        Debug.Log("success");
-        MoveManager.instance.Reset();
-        movePoint.position = startPoint;
-        transform.position = startPoint;
-    }
+    //public void Reset()
+    //{
+    //    Debug.Log("success");
+    //    MoveManager.instance.Reset();
+    //    movePoint.position = startPoint;
+    //    transform.position = startPoint;
+    //}
 }

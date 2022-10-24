@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MoveManager : MonoBehaviour
 {
@@ -24,8 +25,11 @@ public class MoveManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (SceneManager.GetActiveScene().name == "WinScene")
+        {
+            maxMoves = 0;
+        }
         currentMoves = 0;
-        maxMoves = 20;
 
         moveCounterText.text = "Move " + currentMoves.ToString() + "/" + maxMoves.ToString();
         bloodMeterImage.sprite = bloodMeter[0];
@@ -41,10 +45,10 @@ public class MoveManager : MonoBehaviour
         bloodMeterImage.sprite = bloodMeter[bloodMeterIndex];
     }
 
-    public void Reset()
-    {
-        currentMoves = 0;
-        moveCounterText.text = "Move " + currentMoves.ToString() + "/" + maxMoves.ToString();
-        bloodMeterImage.sprite = bloodMeter[0];
-    }
+    //public void Reset()
+    //{
+    //    currentMoves = 0;
+    //    moveCounterText.text = "Move " + currentMoves.ToString() + "/" + maxMoves.ToString();
+    //    bloodMeterImage.sprite = bloodMeter[0];
+    //}
 }
