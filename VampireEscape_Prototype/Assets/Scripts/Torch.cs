@@ -2,23 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+
 public class Torch : MonoBehaviour
 {
     public float minLightIntensity;
     public float maxLightIntensity;
-    public float timeBetweenFlickers;
+    public float secondsBetweenFlickers;
 
-    // Update is called once per frame
-    void Update()
+    UnityEngine.Rendering.Universal.Light2D torchLight;
+
+    void Start()
     {
-        Flicker();
+        torchLight = GetComponent<UnityEngine.Rendering.Universal.Light2D>();
+        StartCoroutine(LightFlicker());
     }
 
-    // Light Flicker
-    void Flicker()
+    IEnumerator LightFlicker()
     {
-        // Flicker script
+        yield return new WaitForSeconds(secondsBetweenFlickers);
+        torchLight.intensity = Random.Range(minLightIntensity, maxLightIntensity);
+        StartCoroutine(LightFlicker());
     }
+
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
