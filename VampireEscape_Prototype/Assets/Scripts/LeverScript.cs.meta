@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f5ec03b6fe09a4c488a0b9ad90c7d89b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - SpriteRenderer: {instanceID: 0}
+  - OnSprite: {fileID: 21300000, guid: 0c81c2e4217b7504dae40363629db010, type: 3}
+  - offSprite: {fileID: 21300000, guid: 1486c1417cb0e374eac2d040b53f2e57, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
