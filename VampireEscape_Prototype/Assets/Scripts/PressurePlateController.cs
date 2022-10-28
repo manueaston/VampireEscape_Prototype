@@ -4,15 +4,40 @@ using UnityEngine;
 
 public class PressurePlateController : MonoBehaviour
 {
-   public bool SteppedOn;
-
-   public void Stepped()
-   {
+    public SpriteRenderer SpriteRenderer;
+    public Sprite offSprite;
+    public Sprite OnSprite;
+    public bool SteppedOn;
+    
+    private void Start()
+    {
+        SpriteRenderer = GetComponent<SpriteRenderer>();
+        SpriteRenderer.sprite = offSprite;
+    }
+    public void Stepped()
+    {
        if(!SteppedOn)
        {
 
            SteppedOn = true;
            Debug.Log("PressurePlate stepped on trigger door/trap");
        }
-   }
+       else if (SteppedOn)
+       {
+            SteppedOn = false;
+       }
+    }
+    public void ChangeSprite()
+    {
+        
+            if (SteppedOn)
+            {
+                SpriteRenderer.sprite = OnSprite;
+            }
+            else if (!SteppedOn)
+            {
+                SpriteRenderer.sprite = offSprite;
+            }
+        
+    }
 }

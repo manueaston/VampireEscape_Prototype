@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6826942841739991938, guid: 142dfbda24021254bbfe5350beef30c1, type: 3}
+      propertyPath: nextLevelIndex
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: -6029701011689199226, guid: 142dfbda24021254bbfe5350beef30c1, type: 3}
       propertyPath: m_Offset.y
       value: 1
@@ -3097,7 +3101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8890551945195505133, guid: 8933eae3cf2e0514abaef7fb446968be, type: 3}
       propertyPath: maxMoves
-      value: 31
+      value: 24
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8933eae3cf2e0514abaef7fb446968be, type: 3}
