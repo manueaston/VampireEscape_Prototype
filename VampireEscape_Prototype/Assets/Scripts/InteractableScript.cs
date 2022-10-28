@@ -17,10 +17,6 @@ public class InteractableScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isInRange)//if we are in range to interact
-        {
-            InteractAction.Invoke();
-        }
 
            
     }
@@ -30,6 +26,7 @@ public class InteractableScript : MonoBehaviour
         {
             isInRange = true;
             Debug.Log("Player is on " + gameObject);
+            InteractAction.Invoke();
         } 
     }
 
