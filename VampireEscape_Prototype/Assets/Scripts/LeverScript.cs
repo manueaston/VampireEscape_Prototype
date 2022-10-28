@@ -32,6 +32,7 @@ public class LeverScript : MonoBehaviour
             {
                 SpriteRenderer.sprite = OnSprite;
                 LeverState = true;
+                InteractAction.Invoke();
             }
             else if (LeverState)
             {
