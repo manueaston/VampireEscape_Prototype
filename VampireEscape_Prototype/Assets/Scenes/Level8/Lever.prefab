@@ -54,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 7a21c72c4e5d2504ebbba51307d72220, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0c81c2e4217b7504dae40363629db010, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5237ca618b33fb74e95d46433584f16f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpriteRenderer: {fileID: 0}
-  OnSprite: {fileID: 21300000, guid: 0c81c2e4217b7504dae40363629db010, type: 3}
-  offSprite: {fileID: 21300000, guid: 1486c1417cb0e374eac2d040b53f2e57, type: 3}
+  OnSprite: {fileID: 21300000, guid: 5237ca618b33fb74e95d46433584f16f, type: 3}
+  offSprite: {fileID: 21300000, guid: 33f6832842453e040944a2c20f6a9f4a, type: 3}
   InteractAction:
     m_PersistentCalls:
       m_Calls: []
@@ -128,5 +128,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.5}
+  m_Size: {x: 2, y: 0.5}
   m_EdgeRadius: 0
