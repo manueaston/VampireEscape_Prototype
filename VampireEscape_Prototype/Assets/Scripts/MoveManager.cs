@@ -58,7 +58,10 @@ public class MoveManager : MonoBehaviour
         moveCounterText.text = "Move " + currentMoves.ToString() + "/" + maxMoves.ToString();
 
         // Calculates which blood meter image to use based on current move percentage out of max moves
-        int bloodMeterIndex = (9 * currentMoves) / maxMoves;
-        bloodMeterImage.sprite = bloodMeter[bloodMeterIndex];
+        if (maxMoves > 0)
+        {
+            int bloodMeterIndex = (9 * currentMoves) / maxMoves;
+            bloodMeterImage.sprite = bloodMeter[bloodMeterIndex];
+        }
     }
 }

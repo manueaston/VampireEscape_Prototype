@@ -12,6 +12,7 @@ public class BloodPool : MonoBehaviour
         {
             Debug.Log("Player At Blood Pool");
             MoveManager.instance.DecreaseMoves(movesAdded);
+            Destroy(gameObject);
         }
     }
 }
