@@ -359,8 +359,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 484010724431189680, guid: e7715376e261c964daa67bf42109cbca, type: 3}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+      - m_Target: {fileID: -7715995632228877976, guid: 7d60673918b9d9c4e89c61c523991d91, type: 3}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Reset
         m_Mode: 1
         m_Arguments:
