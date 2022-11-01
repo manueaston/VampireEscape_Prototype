@@ -31,24 +31,37 @@ public class MoveManager : MonoBehaviour
         }
         currentMoves = 0;
 
-        moveCounterText.text = "Move " + currentMoves.ToString() + "/" + maxMoves.ToString();
-        bloodMeterImage.sprite = bloodMeter[0];
+        UpdateUI();
     }
 
     public void AddMove()
     {
-        currentMoves++;
-        moveCounterText.text = "Move " + currentMoves.ToString() + "/" + maxMoves.ToString();
-
-        // Calculates which blood meter image to use based on current move percentage out of max moves
-        int bloodMeterIndex = (9 * currentMoves) / maxMoves;
-        bloodMeterImage.sprite = bloodMeter[bloodMeterIndex];
+        if (currentMoves < maxMoves)
+        {
+            currentMoves++;
+            UpdateUI();
+        }
     }
 
-    //public void Reset()
-    //{
-    //    currentMoves = 0;
-    //    moveCounterText.text = "Move " + currentMoves.ToString() + "/" + maxMoves.ToString();
-    //    bloodMeterImage.sprite = bloodMeter[0];
-    //}
+    public void DecreaseMoves(int _movesDecreased)
+    {
+        currentMoves -= _movesDecreased;
+        if (currentMoves < 0)
+        {
+            currentMoves = 0;
+        }
+        UpdateUI();
+    }
+
+    private void UpdateUI()
+    {
+        moveCounterText.text = currentMoves.ToString() + "/" + maxMoves.ToString();
+
+        // Calculates which blood meter image to use based on current move percentage out of max moves
+        if (maxMoves > 0)
+        {
+            int bloodMeterIndex = (9 * currentMoves) / maxMoves;
+            bloodMeterImage.sprite = bloodMeter[bloodMeterIndex];
+        }
+    }
 }
