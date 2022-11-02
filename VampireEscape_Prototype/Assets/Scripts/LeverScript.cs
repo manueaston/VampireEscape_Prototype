@@ -12,8 +12,11 @@ public class LeverScript : MonoBehaviour
     private bool LeverState = false;
     private int Timer = 0;
     public UnityEvent InteractAction;
+    public Transform TransformComponate;
+    
     private void Start()
     {
+        TransformComponate = GetComponent<Transform>();
         SpriteRenderer = GetComponent<SpriteRenderer>();
         SpriteRenderer.sprite = offSprite;
     }
@@ -33,12 +36,16 @@ public class LeverScript : MonoBehaviour
                 SpriteRenderer.sprite = OnSprite;
                 LeverState = true;
                 InteractAction.Invoke();
+                gameObject.transform.localScale = new Vector3(-1, 1, 1);
             }
             else if (LeverState)
             {
                 SpriteRenderer.sprite = offSprite;
                 LeverState = false;
+                gameObject.transform.localScale = new Vector3(1, 1, 1);
             }
+           
+
             Timer = 100;
         }
     }
