@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5.0f;
+    public float moveSpeed = 2.5f;
     public Transform movePoint;
     public Vector3 startPoint;
 
     public LayerMask whatStopsMovement;
 
-    private bool moving = false;
+    public bool moving = false;
 
     private Animator animator;
-    bool idle = true;
-    private float timeUntilIdle = 1.0f;
+   // bool idle = true;
+   // private float timeUntilIdle = 1.0f;
 
     private void Awake()
     {
@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             moving = false;
+            animator.SetBool("IsWalking", false);
         }
 
         // check if player is already moving, and if they have no moves left
@@ -50,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetFloat("X", Input.GetAxisRaw("Horizontal")); 
                 animator.SetFloat("Y", 0);
                 animator.SetBool("IsWalking", true);
-                idle = false;
+                //idle = false;
 
                 if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0.0f, 0.0f), 0.2f, whatStopsMovement))
                 {
@@ -64,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetFloat("X", 0);
                 animator.SetFloat("Y", Input.GetAxisRaw("Vertical"));
                 animator.SetBool("IsWalking", true);
-                idle = false;
+                //idle = false;
 
                 if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(0.0f, Input.GetAxisRaw("Vertical"), 0.0f), 0.2f, whatStopsMovement))
                 {
@@ -74,22 +75,23 @@ public class PlayerMovement : MonoBehaviour
             }
         }  
 
-        if (!idle)
-        {
-            IdleCountdown();
-        }
+        //if (!idle)
+        //{
+        //    animator.SetBool("IsWaiting", true);
+        //    IdleCountdown();
+        //}
 
     }
 
-    private void IdleCountdown() // Counts down to idle state after movement
-    {
-        timeUntilIdle -= Time.deltaTime;
+//    private void IdleCountdown() // Counts down to idle state after movement
+//    {
+//        timeUntilIdle -= Time.deltaTime;
 
-        if (timeUntilIdle <= 0.0f)
-        {
-            idle = true;
-            animator.SetBool("IsWalking", false);
-            timeUntilIdle = 1.0f;
-        }
-    }
+//        if (timeUntilIdle <= 0.0f)
+//        {
+//            idle = true;
+//            animator.SetBool("IsWaiting", false);
+//            timeUntilIdle = 1.0f;
+//        }
+//    }
 }

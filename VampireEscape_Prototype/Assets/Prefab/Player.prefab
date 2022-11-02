@@ -162,12 +162,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197941a28ef15f845980befa9a67b048, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 2.5
   movePoint: {fileID: 484010724752784702}
   startPoint: {x: 0, y: 0, z: 0}
   whatStopsMovement:
     serializedVersion: 2
     m_Bits: 64
+  moving: 0
 --- !u!61 &484010724431189681
 BoxCollider2D:
   m_ObjectHideFlags: 0
