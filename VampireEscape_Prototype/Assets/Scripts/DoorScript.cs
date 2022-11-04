@@ -32,14 +32,14 @@ public class DoorScript : MonoBehaviour
 
     public void OpenDoor()
     {
+        BoxCollider = GetComponent<BoxCollider2D>();
 
-
-        if (isOpen)
+        if (!isOpen)
         {
             isOpen = true;
             SpriteRenderer.sprite = OpenSprite;
         }
-        else if (!isOpen)
+        else if (isOpen)
         {
             isOpen = false;
             SpriteRenderer.sprite = ClosedSprite;
@@ -48,7 +48,7 @@ public class DoorScript : MonoBehaviour
 
         if (!exitDoor && isOpen)
         {
-            BoxCollider = GetComponent<BoxCollider2D>();
+            
             BoxCollider.enabled = false;
         }
 
