@@ -138,6 +138,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lever_03_c
       objectReference: {fileID: 0}
+    - target: {fileID: 7042159998992779711, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: m_Offset.y
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -523,6 +527,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6826942841739991938, guid: c6bbca72cbc459f4e9850e82075cd941, type: 3}
+      propertyPath: OpenSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1d8cd5ffb65785441af3bf6b99956fc5, type: 3}
+    - target: {fileID: -6826942841739991938, guid: c6bbca72cbc459f4e9850e82075cd941, type: 3}
+      propertyPath: ClosedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 856b0f00d5a59fb4cb29b9c1f839cb66, type: 3}
     - target: {fileID: -6826942841739991938, guid: c6bbca72cbc459f4e9850e82075cd941, type: 3}
       propertyPath: nextLevelIndex
       value: 4
@@ -1118,6 +1130,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lever_02_b
       objectReference: {fileID: 0}
+    - target: {fileID: 7042159998992779711, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: m_Offset.y
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1206,6 +1222,10 @@ PrefabInstance:
     - target: {fileID: 5264675391772150368, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
       propertyPath: m_Name
       value: Lever_01_a
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042159998992779711, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: m_Offset.y
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.size
@@ -4486,6 +4506,10 @@ PrefabInstance:
     - target: {fileID: 5264675391772150368, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
       propertyPath: m_Name
       value: Lever_04_d
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042159998992779711, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: m_Offset.y
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.size

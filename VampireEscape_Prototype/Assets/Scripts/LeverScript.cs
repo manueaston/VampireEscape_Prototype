@@ -43,6 +43,7 @@ public class LeverScript : MonoBehaviour
                 SpriteRenderer.sprite = offSprite;
                 LeverState = false;
                 gameObject.transform.localScale = new Vector3(1, 1, 1);
+                InteractAction.Invoke();
             }
            
 
