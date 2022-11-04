@@ -11,6 +11,8 @@ public class Torch : MonoBehaviour
     public float maxLightIntensity;
     public float secondsBetweenFlickers;
 
+    private bool activated = true;
+
     UnityEngine.Rendering.Universal.Light2D torchLight;
 
     void Start()
@@ -22,14 +24,26 @@ public class Torch : MonoBehaviour
     IEnumerator LightFlicker()
     {
         yield return new WaitForSeconds(secondsBetweenFlickers);
-        torchLight.intensity = Random.Range(minLightIntensity, maxLightIntensity);
+        if (activated)
+        {
+            torchLight.intensity = Random.Range(minLightIntensity, maxLightIntensity);
+        }
         StartCoroutine(LightFlicker());
+    }
+
+    public void Deactivate()
+    {
+        activated = false;
+        StopCoroutine(LightFlicker());
+        torchLight.intensity = 0;
+
+        // change sprite
     }
 
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && activated)
         {
             Debug.Log("Player At Light");
             MoveManager.instance.AddMove();

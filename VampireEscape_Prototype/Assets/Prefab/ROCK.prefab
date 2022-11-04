@@ -124,4 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63e17b8e866b08046864728b2834818b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsDoorOpen: 0
+  spriteRenderer: {fileID: 0}
+  unbroken: {fileID: 21300000, guid: 57b68c98b992efe40977bb9f84f5f363, type: 3}
+  broken: {fileID: 21300000, guid: ee7d3d0256e5d7d44825ab5e413c7bc1, type: 3}
+  IsActive: 0
