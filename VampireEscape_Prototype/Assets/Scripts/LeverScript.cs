@@ -31,6 +31,8 @@ public class LeverScript : MonoBehaviour
     {
         if (Timer == 0)
         {
+            MoveManager.instance.AddMove(); // Adds a move to the player
+
             if (!LeverState)
             {
                 SpriteRenderer.sprite = OnSprite;
@@ -47,7 +49,7 @@ public class LeverScript : MonoBehaviour
             }
            
 
-            Timer = 100;
+            Timer = 500;
         }
     }
     public void OnTriggerStay2D(Collider2D collision)
