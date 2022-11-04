@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject player;
-    public GameObject[] doors;
+    //public GameObject player;
+    //public GameObject[] doors;
 
     public int levelMaxMoves;
 

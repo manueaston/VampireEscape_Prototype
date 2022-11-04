@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class MoveManager : MonoBehaviour
 {
     public static MoveManager instance;
-
+    public UnityEvent TimerDelay;
     public Text moveCounterText;
 
     public Image bloodMeterImage;
@@ -40,6 +41,7 @@ public class MoveManager : MonoBehaviour
         {
             currentMoves++;
             UpdateUI();
+            TimerDelay.Invoke();
         }
     }
 
