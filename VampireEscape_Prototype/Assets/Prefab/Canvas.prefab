@@ -258,6 +258,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 939f58f2a6182c34bb38da3f189faec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimerDelay:
+    m_PersistentCalls:
+      m_Calls: []
   moveCounterText: {fileID: 7056990415715061791}
   bloodMeterImage: {fileID: 7147072714244618906}
   bloodMeter:
@@ -509,4 +512,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0/0
+  m_Text: 0

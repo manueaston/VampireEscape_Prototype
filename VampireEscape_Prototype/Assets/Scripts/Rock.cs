@@ -10,13 +10,13 @@ public class Rock : MonoBehaviour
     public Sprite broken;
     //
 
-    private BoxCollider2D collider;
+    public BoxCollider2D rockCollider;
     private bool IsActive = true;
 
     public void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        collider = GetComponent<BoxCollider2D>();
+        rockCollider = GetComponent<BoxCollider2D>();
         spriteRenderer.sprite = unbroken;
         gameObject.layer = 6; // Layer StopMovement
     }
@@ -25,7 +25,7 @@ public class Rock : MonoBehaviour
         if (IsActive)
         {
             IsActive = false;
-            collider.enabled = false;
+            rockCollider.enabled = false;
             spriteRenderer.sprite = broken;
             gameObject.layer = 0; // Layer Default
         }
