@@ -22,6 +22,8 @@ public class DoorScript : MonoBehaviour
 
     public void Start()
     {
+        doorLight = GetComponent<UnityEngine.Rendering.Universal.Light2D>();
+
         MoveTimer = defultMoveTimer;
         LevelIndex = SceneManager.GetActiveScene().buildIndex;
         SpriteRenderer = GetComponent<SpriteRenderer>();
@@ -35,8 +37,6 @@ public class DoorScript : MonoBehaviour
         {
             doorLight.enabled = false; // disable light
         }
-
-        doorLight = GetComponent<UnityEngine.Rendering.Universal.Light2D>();
         
     }
 
