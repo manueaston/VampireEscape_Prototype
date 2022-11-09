@@ -17,6 +17,7 @@ public class MoveManager : MonoBehaviour
 
     // Screen Fade
     public Image blackSquare;
+    private Color squareColour;
 
     public int currentMoves;
     public int maxMoves;
@@ -29,6 +30,13 @@ public class MoveManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // set fade in square to alpha = 1
+        squareColour = blackSquare.GetComponent<Image>().color;
+        squareColour = new Color(squareColour.r, squareColour.g, squareColour.b, 1.0f);
+        blackSquare.GetComponent<Image>().color = squareColour;
+        // fade in
+        StartCoroutine(ScreenFadeIn());
+
         if (SceneManager.GetActiveScene().name == "WinScene")
         {
             maxMoves = 0;
@@ -82,12 +90,11 @@ public class MoveManager : MonoBehaviour
             blackSquare.GetComponent<Image>().color = squareColour;
             yield return null;
         }
-
     }
 
     public IEnumerator ScreenFadeIn(float _FadeSpeed = 1.0f)
     {
-        Color squareColour = blackSquare.GetComponent<Image>().color;
+        squareColour = blackSquare.GetComponent<Image>().color;
         float fadeAmount;
 
         while (blackSquare.GetComponent<Image>().color.a > 0)

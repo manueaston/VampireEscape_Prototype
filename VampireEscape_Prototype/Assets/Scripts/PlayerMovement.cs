@@ -89,5 +89,6 @@ public class PlayerMovement : MonoBehaviour
     {
         animator.SetBool("IsDying", true);
         dying = true;
+        StartCoroutine(MoveManager.instance.ScreenFadeOut(0.25f));
     }
 }

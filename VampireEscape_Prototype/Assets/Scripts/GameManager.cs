@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(MoveManager.instance.ScreenFadeIn());
+        //StartCoroutine(MoveManager.instance.ScreenFadeIn());
     }
 
     public void Reset()
