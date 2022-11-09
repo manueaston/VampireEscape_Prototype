@@ -70,7 +70,7 @@ public class MoveManager : MonoBehaviour
         }
     }
 
-    public IEnumerator ScreenFadeOut(float _FadeSpeed = 1.0f)
+    public IEnumerator ScreenFadeOut(float _FadeSpeed = 0.25f)
     {
         Color squareColour = blackSquare.GetComponent<Image>().color;
         float fadeAmount;
@@ -82,6 +82,7 @@ public class MoveManager : MonoBehaviour
             blackSquare.GetComponent<Image>().color = squareColour;
             yield return null;
         }
+
     }
 
     public IEnumerator ScreenFadeIn(float _FadeSpeed = 1.0f)

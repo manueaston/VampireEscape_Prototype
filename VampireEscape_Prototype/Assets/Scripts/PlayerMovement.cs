@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask whatStopsMovement;
 
     public bool moving = false;
+    public bool dying = false;
 
     private Animator animator;
    // bool idle = true;
@@ -80,9 +81,13 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            animator.SetBool("IsDying", true);
-            StartCoroutine(MoveManager.instance.ScreenFadeOut());
+            Die();
         }
     }
 
+    private void Die()
+    {
+        animator.SetBool("IsDying", true);
+        dying = true;
+    }
 }
