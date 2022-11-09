@@ -180,6 +180,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f3b4c3a3847c1d46a7d1ee0068104eb, type: 3}
+--- !u!114 &190459060 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5957478486376691885, guid: 3f3b4c3a3847c1d46a7d1ee0068104eb, type: 3}
+  m_PrefabInstance: {fileID: 1848125150}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63e17b8e866b08046864728b2834818b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &407351431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -189,7 +200,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 513623086896777196, guid: 374194dd6cd076f408fa286489e96b36, type: 3}
       propertyPath: m_Name
-      value: Torch (1)
+      value: Torch
       objectReference: {fileID: 0}
     - target: {fileID: 6639895938818611830, guid: 374194dd6cd076f408fa286489e96b36, type: 3}
       propertyPath: m_RootOrder
@@ -250,19 +261,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5264675391772150368, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
       propertyPath: m_Name
-      value: Lever
+      value: Lever(rockdoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042159998992779711, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: m_Offset.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042159998992779711, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1197367708}
+    - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Rock, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8295984307191056929, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
       propertyPath: m_RootOrder
@@ -720,17 +755,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7951071734737690501, guid: 142dfbda24021254bbfe5350beef30c1, type: 3}
   m_PrefabInstance: {fileID: 497102196}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &542147750 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -6826942841739991938, guid: 142dfbda24021254bbfe5350beef30c1, type: 3}
-  m_PrefabInstance: {fileID: 497102196}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 542147747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe09bf5fbe5667448aaebf2fc5ea48da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &636384962
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -784,7 +808,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4274538378954170065, guid: 3f3b4c3a3847c1d46a7d1ee0068104eb, type: 3}
       propertyPath: m_Name
-      value: ROCK (3)
+      value: ROCK1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f3b4c3a3847c1d46a7d1ee0068104eb, type: 3}
@@ -802,7 +826,39 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5264675391772150368, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
       propertyPath: m_Name
-      value: Lever (1)
+      value: Lever1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042159998992779711, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: m_Offset.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1569521566}
+    - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Rock, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8295984307191056929, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
       propertyPath: m_RootOrder
@@ -1326,6 +1382,28 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1197367708 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5957478486376691885, guid: 3f3b4c3a3847c1d46a7d1ee0068104eb, type: 3}
+  m_PrefabInstance: {fileID: 17778232}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63e17b8e866b08046864728b2834818b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1569521566 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5957478486376691885, guid: 3f3b4c3a3847c1d46a7d1ee0068104eb, type: 3}
+  m_PrefabInstance: {fileID: 636384962}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63e17b8e866b08046864728b2834818b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1654881610
 GameObject:
   m_ObjectHideFlags: 0
@@ -2323,10 +2401,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4274538378954170065, guid: 3f3b4c3a3847c1d46a7d1ee0068104eb, type: 3}
       propertyPath: m_Name
-      value: ROCK
+      value: ROCK2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f3b4c3a3847c1d46a7d1ee0068104eb, type: 3}
+--- !u!114 &1962788532 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8694447331096570118, guid: 374194dd6cd076f408fa286489e96b36, type: 3}
+  m_PrefabInstance: {fileID: 407351431}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 618179df7570f9143b6f67fca442a078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2039321080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2336,7 +2425,39 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5264675391772150368, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
       propertyPath: m_Name
-      value: Lever (2)
+      value: Lever2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042159998992779711, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: m_Offset.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 190459060}
+    - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Rock, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8295984307191056929, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
       propertyPath: m_RootOrder
@@ -2514,24 +2635,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 520552158836533399, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
+      propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 520552158836533399, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 520552158836533399, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 542147750}
+      objectReference: {fileID: 1962788532}
     - target: {fileID: 520552158836533399, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 520552158836533399, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: OpenDoor
+      value: Deactivate
       objectReference: {fileID: 0}
     - target: {fileID: 520552158836533399, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: DoorScript, Assembly-CSharp
+      value: Torch, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 520552158836533399, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -2728,7 +2853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8890551945195505133, guid: f843c38edc343a24e900a025e9872632, type: 3}
       propertyPath: maxMoves
-      value: 30
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f843c38edc343a24e900a025e9872632, type: 3}
