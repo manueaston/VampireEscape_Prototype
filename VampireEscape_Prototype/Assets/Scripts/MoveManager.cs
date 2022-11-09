@@ -15,6 +15,9 @@ public class MoveManager : MonoBehaviour
     public Sprite[] bloodMeter;
     // array contains all sprites of blood meter
 
+    // Screen Fade
+    public Image blackSquare;
+
     public int currentMoves;
     public int maxMoves;
 
@@ -64,6 +67,34 @@ public class MoveManager : MonoBehaviour
         {
             int bloodMeterIndex = (9 * currentMoves) / maxMoves;
             bloodMeterImage.sprite = bloodMeter[bloodMeterIndex];
+        }
+    }
+
+    public IEnumerator ScreenFadeOut(float _FadeSpeed = 1.0f)
+    {
+        Color squareColour = blackSquare.GetComponent<Image>().color;
+        float fadeAmount;
+
+        while (blackSquare.GetComponent<Image>().color.a < 1)
+        {
+            fadeAmount = squareColour.a + (_FadeSpeed * Time.deltaTime);
+            squareColour = new Color(squareColour.r, squareColour.g, squareColour.b, fadeAmount);
+            blackSquare.GetComponent<Image>().color = squareColour;
+            yield return null;
+        }
+    }
+
+    public IEnumerator ScreenFadeIn(float _FadeSpeed = 1.0f)
+    {
+        Color squareColour = blackSquare.GetComponent<Image>().color;
+        float fadeAmount;
+
+        while (blackSquare.GetComponent<Image>().color.a > 0)
+        {
+            fadeAmount = squareColour.a - (_FadeSpeed * Time.deltaTime);
+            squareColour = new Color(squareColour.r, squareColour.g, squareColour.b, fadeAmount);
+            blackSquare.GetComponent<Image>().color = squareColour;
+            yield return null;
         }
     }
 }
