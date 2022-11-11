@@ -105,7 +105,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("BloodTrail"))
         {
-            Debug.Log("colliding with blood trail");
             onBloodTrail = true;
         }
     }

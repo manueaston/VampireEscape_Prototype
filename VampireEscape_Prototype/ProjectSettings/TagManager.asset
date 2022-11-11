@@ -46,3 +46,6 @@ TagManager:
   - name: Secondary_FOW
     uniqueID: 2564562585
     locked: 1
+  - name: player
+    uniqueID: 781240411
+    locked: 0
