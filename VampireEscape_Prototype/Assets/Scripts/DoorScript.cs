@@ -16,6 +16,7 @@ public class DoorScript : MonoBehaviour
     public bool OnTimer = false;
     public int defultMoveTimer = -1;
     private int MoveTimer;
+    //private GameObject Object;
 
     // Door light
     private UnityEngine.Rendering.Universal.Light2D doorLight;
@@ -23,11 +24,11 @@ public class DoorScript : MonoBehaviour
     public void Start()
     {
         doorLight = GetComponent<UnityEngine.Rendering.Universal.Light2D>();
-
         MoveTimer = defultMoveTimer;
         LevelIndex = SceneManager.GetActiveScene().buildIndex;
         SpriteRenderer = GetComponent<SpriteRenderer>();
         SpriteRenderer.sprite = ClosedSprite;
+        gameObject.layer = 6;
         if (StayOpen)
         {
             isOpen = true;
@@ -48,7 +49,9 @@ public class DoorScript : MonoBehaviour
         {
             isOpen = true;
             SpriteRenderer.sprite = OpenSprite;
+            gameObject.layer = 1;
             doorLight.enabled = true; // enable light
+            
         }
         else if (isOpen)
         {
@@ -56,6 +59,7 @@ public class DoorScript : MonoBehaviour
             SpriteRenderer.sprite = ClosedSprite;
             BoxCollider.enabled = true;
             doorLight.enabled = false; // disbale light
+            gameObject.layer = 6;
         }
 
         if (!exitDoor && isOpen)
