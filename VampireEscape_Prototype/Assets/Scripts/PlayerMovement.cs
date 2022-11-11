@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask whatStopsMovement;
 
     public bool moving = false;
+    public bool dying = false;
 
     private Animator animator;
    // bool idle = true;
@@ -42,56 +43,52 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("IsWalking", false);
         }
 
-        // check if player is already moving, and if they have no moves left
-        if (!moving && MoveManager.instance.currentMoves < MoveManager.instance.maxMoves)
+        // check if player has used all moves
+        if (MoveManager.instance.currentMoves < MoveManager.instance.maxMoves)
         {
-            if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1.0f)
+            // check if player is already moving, and if they have no moves left
+            if (!moving)
             {
-                // for animation
-                animator.SetFloat("X", Input.GetAxisRaw("Horizontal")); 
-                animator.SetFloat("Y", 0);
-                animator.SetBool("IsWalking", true);
-                //idle = false;
-
-                if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0.0f, 0.0f), 0.2f, whatStopsMovement))
+                if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1.0f)
                 {
-                    movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0.0f, 0.0f);
-                    MoveManager.instance.AddMove();
+                    // for animation
+                    animator.SetFloat("X", Input.GetAxisRaw("Horizontal"));
+                    animator.SetFloat("Y", 0);
+                    animator.SetBool("IsWalking", true);
+                    //idle = false;
+
+                    if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0.0f, 0.0f), 0.2f, whatStopsMovement))
+                    {
+                        movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0.0f, 0.0f);
+                        MoveManager.instance.AddMove();
+                    }
+                }
+                else if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1.0f)
+                {
+                    // for animation
+                    animator.SetFloat("X", 0);
+                    animator.SetFloat("Y", Input.GetAxisRaw("Vertical"));
+                    animator.SetBool("IsWalking", true);
+                    //idle = false;
+
+                    if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(0.0f, Input.GetAxisRaw("Vertical"), 0.0f), 0.2f, whatStopsMovement))
+                    {
+                        movePoint.position += new Vector3(0.0f, Input.GetAxisRaw("Vertical"), 0.0f);
+                        MoveManager.instance.AddMove();
+                    }
                 }
             }
-            else if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1.0f)
-            {
-                // for animation
-                animator.SetFloat("X", 0);
-                animator.SetFloat("Y", Input.GetAxisRaw("Vertical"));
-                animator.SetBool("IsWalking", true);
-                //idle = false;
-
-                if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(0.0f, Input.GetAxisRaw("Vertical"), 0.0f), 0.2f, whatStopsMovement))
-                {
-                    movePoint.position += new Vector3(0.0f, Input.GetAxisRaw("Vertical"), 0.0f);
-                    MoveManager.instance.AddMove();
-                }
-            }
-        }  
-
-        //if (!idle)
-        //{
-        //    animator.SetBool("IsWaiting", true);
-        //    IdleCountdown();
-        //}
-
+        }
+        else
+        {
+            Die();
+        }
     }
 
-//    private void IdleCountdown() // Counts down to idle state after movement
-//    {
-//        timeUntilIdle -= Time.deltaTime;
-
-//        if (timeUntilIdle <= 0.0f)
-//        {
-//            idle = true;
-//            animator.SetBool("IsWaiting", false);
-//            timeUntilIdle = 1.0f;
-//        }
-//    }
+    private void Die()
+    {
+        animator.SetBool("IsDying", true);
+        dying = true;
+        StartCoroutine(MoveManager.instance.ScreenFadeOut(0.25f));
+    }
 }
