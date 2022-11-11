@@ -11,6 +11,10 @@ public class MoveManager : MonoBehaviour
     public UnityEvent TimerDelay;
     public Text moveCounterText;
 
+    // Reset text stuff
+    public Text resetText;
+    private ResetTextScript resetTextScript;
+
     public Image bloodMeterImage;
     public Sprite[] bloodMeter;
     // array contains all sprites of blood meter
@@ -25,6 +29,7 @@ public class MoveManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        resetTextScript = resetText.GetComponent<ResetTextScript>();
     }
 
     // Start is called before the first frame update
@@ -82,6 +87,9 @@ public class MoveManager : MonoBehaviour
     {
         Color squareColour = blackSquare.GetComponent<Image>().color;
         float fadeAmount;
+
+        // Jitter reset text
+        resetTextScript.StartJitter();
 
         while (blackSquare.GetComponent<Image>().color.a < 1)
         {
