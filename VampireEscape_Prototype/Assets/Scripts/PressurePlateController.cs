@@ -49,7 +49,7 @@ public class PressurePlateController : MonoBehaviour
             if (SteppedOn)
             {
                 SpriteRenderer.sprite = OnSprite;
-                audioSource.PlayOneShot(audioClip, volume);
+                
             }
             else if (!SteppedOn)
             {

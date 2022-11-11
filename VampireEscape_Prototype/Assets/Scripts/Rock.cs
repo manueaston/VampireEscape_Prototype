@@ -38,16 +38,24 @@ public class Rock : MonoBehaviour
         if (IsActive)
         {
             StartCoroutine(OpenDoorCoroutine());
+           
         }
     }
 
     public IEnumerator OpenDoorCoroutine()
     {
         yield return new WaitForSeconds(0.5f);
+        if(IsActive == true)
+        {
+            audioSource.PlayOneShot(audioClip, volume);
+        }
+
         IsActive = false;
+
         rockCollider.enabled = false;
         spriteRenderer.sprite = broken;
         gameObject.layer = 0; // Layer Default
         doorLight.enabled = true;
+        
     }
 }
