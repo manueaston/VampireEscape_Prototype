@@ -28,7 +28,7 @@ public class DoorScript : MonoBehaviour
         LevelIndex = SceneManager.GetActiveScene().buildIndex;
         SpriteRenderer = GetComponent<SpriteRenderer>();
         SpriteRenderer.sprite = ClosedSprite;
-        gameObject.layer = 6;
+        
         if (StayOpen)
         {
             isOpen = true;
@@ -37,8 +37,9 @@ public class DoorScript : MonoBehaviour
         else
         {
             doorLight.enabled = false; // disable light
+            gameObject.layer = 6;
         }
-        
+
     }
     
     public void OpenDoor()
