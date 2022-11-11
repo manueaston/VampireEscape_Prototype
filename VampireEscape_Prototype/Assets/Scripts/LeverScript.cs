@@ -50,7 +50,7 @@ public class LeverScript : MonoBehaviour
             }
            
 
-            Timer = 500;
+            Timer = 200;
         }
     }
     public void OnTriggerStay2D(Collider2D collision)
