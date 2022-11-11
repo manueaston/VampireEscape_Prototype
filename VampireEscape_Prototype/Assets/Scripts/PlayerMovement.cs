@@ -49,6 +49,11 @@ public class PlayerMovement : MonoBehaviour
                 Instantiate(bloodTrail, transform.position, Quaternion.identity);
                 onBloodTrail = true;
             }
+
+            if (MoveManager.instance.currentMoves >= MoveManager.instance.maxMoves)
+            {
+                Die();
+            }
         }
 
         // check if player has used all moves
@@ -86,10 +91,6 @@ public class PlayerMovement : MonoBehaviour
                     }
                 }
             }
-        }
-        else
-        {
-            Die();
         }
     }
 

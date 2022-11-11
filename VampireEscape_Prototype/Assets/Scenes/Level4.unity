@@ -2042,6 +2042,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BloodPool
       objectReference: {fileID: 0}
+    - target: {fileID: 6903125479376101774, guid: 7d02937ab5b0b9c418ffce21301b756d, type: 3}
+      propertyPath: movesAdded
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d02937ab5b0b9c418ffce21301b756d, type: 3}
 --- !u!1001 &901309145
