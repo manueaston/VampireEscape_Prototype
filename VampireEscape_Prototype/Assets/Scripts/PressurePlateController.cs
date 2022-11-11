@@ -8,11 +8,18 @@ public class PressurePlateController : MonoBehaviour
     public Sprite offSprite;
     public Sprite OnSprite;
     public bool SteppedOn;
-    
+
+    //Audio Controller
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+    [Range(0, 1)] public float volume;
+
     private void Start()
     {
         SpriteRenderer = GetComponent<SpriteRenderer>();
         SpriteRenderer.sprite = offSprite;
+
+        audioSource = GetComponent<AudioSource>();
     }
     public void Stepped()
     {
@@ -33,6 +40,7 @@ public class PressurePlateController : MonoBehaviour
             if (SteppedOn)
             {
                 SpriteRenderer.sprite = OnSprite;
+                audioSource.PlayOneShot(audioClip, volume);
             }
             else if (!SteppedOn)
             {
