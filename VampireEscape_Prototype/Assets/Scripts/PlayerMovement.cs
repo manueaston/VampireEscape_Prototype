@@ -12,10 +12,11 @@ public class PlayerMovement : MonoBehaviour
 
     public bool moving = false;
     public bool dying = false;
+    public bool onBloodTrail = false;
 
     private Animator animator;
-   // bool idle = true;
-   // private float timeUntilIdle = 1.0f;
+
+    public GameObject bloodTrail;
 
     private void Awake()
     {
@@ -41,6 +42,13 @@ public class PlayerMovement : MonoBehaviour
         {
             moving = false;
             animator.SetBool("IsWalking", false);
+
+            // create blood trail
+            if (!onBloodTrail)
+            {
+                Instantiate(bloodTrail, transform.position, Quaternion.identity);
+                onBloodTrail = true;
+            }
         }
 
         // check if player has used all moves
@@ -90,5 +98,23 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("IsDying", true);
         dying = true;
         StartCoroutine(MoveManager.instance.ScreenFadeOut(0.25f));
+    }
+
+    // Sets onBloodTrail variable
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("BloodTrail"))
+        {
+            Debug.Log("colliding with blood trail");
+            onBloodTrail = true;
+        }
+    }
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("BloodTrail"))
+        {
+            onBloodTrail = false;
+        }
     }
 }

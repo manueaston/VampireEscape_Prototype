@@ -169,6 +169,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   moving: 0
+  dying: 0
+  onBloodTrail: 0
+  bloodTrail: {fileID: 4008546062010076311, guid: e5816fa5f2120354a8d52da965570167, type: 3}
 --- !u!61 &484010724431189681
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -179,7 +182,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
