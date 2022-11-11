@@ -15,6 +15,10 @@ public class MoveManager : MonoBehaviour
     public Sprite[] bloodMeter;
     // array contains all sprites of blood meter
 
+    // Screen Fade
+    public Image blackSquare;
+    private Color squareColour;
+
     public int currentMoves;
     public int maxMoves;
 
@@ -26,6 +30,13 @@ public class MoveManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // set fade in square to alpha = 1
+        squareColour = blackSquare.GetComponent<Image>().color;
+        squareColour = new Color(squareColour.r, squareColour.g, squareColour.b, 1.0f);
+        blackSquare.GetComponent<Image>().color = squareColour;
+        // fade in
+        StartCoroutine(ScreenFadeIn());
+
         if (SceneManager.GetActiveScene().name == "WinScene")
         {
             maxMoves = 0;
@@ -64,6 +75,34 @@ public class MoveManager : MonoBehaviour
         {
             int bloodMeterIndex = (9 * currentMoves) / maxMoves;
             bloodMeterImage.sprite = bloodMeter[bloodMeterIndex];
+        }
+    }
+
+    public IEnumerator ScreenFadeOut(float _FadeSpeed = 0.25f)
+    {
+        Color squareColour = blackSquare.GetComponent<Image>().color;
+        float fadeAmount;
+
+        while (blackSquare.GetComponent<Image>().color.a < 1)
+        {
+            fadeAmount = squareColour.a + (_FadeSpeed * Time.deltaTime);
+            squareColour = new Color(squareColour.r, squareColour.g, squareColour.b, fadeAmount);
+            blackSquare.GetComponent<Image>().color = squareColour;
+            yield return null;
+        }
+    }
+
+    public IEnumerator ScreenFadeIn(float _FadeSpeed = 1.0f)
+    {
+        squareColour = blackSquare.GetComponent<Image>().color;
+        float fadeAmount;
+
+        while (blackSquare.GetComponent<Image>().color.a > 0)
+        {
+            fadeAmount = squareColour.a - (_FadeSpeed * Time.deltaTime);
+            squareColour = new Color(squareColour.r, squareColour.g, squareColour.b, fadeAmount);
+            blackSquare.GetComponent<Image>().color = squareColour;
+            yield return null;
         }
     }
 }
