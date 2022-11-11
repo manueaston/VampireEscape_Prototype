@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7042159998992779711, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
       propertyPath: m_Offset.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.size
@@ -1132,7 +1132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7042159998992779711, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
       propertyPath: m_Offset.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.size
@@ -1225,7 +1225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7042159998992779711, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
       propertyPath: m_Offset.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.size
@@ -4509,7 +4509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7042159998992779711, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
       propertyPath: m_Offset.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.size
