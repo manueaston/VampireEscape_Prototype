@@ -37,8 +37,9 @@ public class LeverScript : MonoBehaviour
             {
                 SpriteRenderer.sprite = OnSprite;
                 LeverState = true;
-                InteractAction.Invoke();
                 gameObject.transform.localScale = new Vector3(-1, 1, 1);
+                InteractAction.Invoke();
+                
             }
             else if (LeverState)
             {

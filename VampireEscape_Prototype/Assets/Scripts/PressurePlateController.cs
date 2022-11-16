@@ -8,11 +8,14 @@ public class PressurePlateController : MonoBehaviour
     public Sprite offSprite;
     public Sprite OnSprite;
     public bool SteppedOn;
+    private UnityEngine.Rendering.Universal.Light2D Light;
     
     private void Start()
     {
         SpriteRenderer = GetComponent<SpriteRenderer>();
+        Light = GetComponent<UnityEngine.Rendering.Universal.Light2D>();
         SpriteRenderer.sprite = offSprite;
+        Light.enabled = false;
     }
     public void Stepped()
     {
@@ -21,6 +24,8 @@ public class PressurePlateController : MonoBehaviour
 
            SteppedOn = true;
            Debug.Log("PressurePlate stepped on trigger door/trap");
+           Light.enabled = true;
+
        }
        else if (SteppedOn)
        {
