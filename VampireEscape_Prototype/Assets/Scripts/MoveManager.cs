@@ -22,6 +22,16 @@ public class MoveManager : MonoBehaviour
     public int currentMoves;
     public int maxMoves;
 
+    //Audio Controller for glass break
+    public AudioSource audioGlassSource;
+    public AudioClip audioGlassClip;
+    [Range(0, 1)] public float volumeGlass;
+
+
+    //Audio Controller for heavy breathing
+    public AudioSource audioBreathSource;
+    public AudioClip audioBreathClip;
+    [Range(0, 1)] public float volumeBreath;
     private void Awake()
     {
         instance = this;
@@ -30,6 +40,10 @@ public class MoveManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Setup Ausio component
+        audioGlassSource = GetComponent<AudioSource>();
+        audioBreathSource = GetComponent<AudioSource>();
+
         // set fade in square to alpha = 1
         squareColour = blackSquare.GetComponent<Image>().color;
         squareColour = new Color(squareColour.r, squareColour.g, squareColour.b, 1.0f);
@@ -75,6 +89,17 @@ public class MoveManager : MonoBehaviour
         {
             int bloodMeterIndex = (9 * currentMoves) / maxMoves;
             bloodMeterImage.sprite = bloodMeter[bloodMeterIndex];
+
+            //these will play breathing and glass break sounds according to the animation change in the ui.
+            if(bloodMeterImage.sprite == bloodMeter[8])
+            {
+                audioBreathSource.PlayOneShot(audioBreathClip, volumeBreath);
+            }
+
+            if (bloodMeterImage.sprite == bloodMeter[9])
+            {
+                audioGlassSource.PlayOneShot(audioGlassClip, volumeGlass);
+            }
         }
     }
 
