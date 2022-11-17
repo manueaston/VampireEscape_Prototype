@@ -22,6 +22,11 @@ public class MoveManager : MonoBehaviour
     public int currentMoves;
     public int maxMoves;
 
+    //Audio Controller
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+    [Range(0, 1)] public float volume;
+
     private void Awake()
     {
         instance = this;
@@ -30,6 +35,9 @@ public class MoveManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Setup Ausio component
+        audioSource = GetComponent<AudioSource>();
+
         // set fade in square to alpha = 1
         squareColour = blackSquare.GetComponent<Image>().color;
         squareColour = new Color(squareColour.r, squareColour.g, squareColour.b, 1.0f);
@@ -75,6 +83,11 @@ public class MoveManager : MonoBehaviour
         {
             int bloodMeterIndex = (9 * currentMoves) / maxMoves;
             bloodMeterImage.sprite = bloodMeter[bloodMeterIndex];
+
+            if (bloodMeterImage.sprite == bloodMeter[9])
+            {
+                audioSource.PlayOneShot(audioClip, volume);
+            }
         }
     }
 
