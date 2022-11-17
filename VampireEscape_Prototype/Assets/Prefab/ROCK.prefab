@@ -130,7 +130,7 @@ MonoBehaviour:
   broken: {fileID: 21300000, guid: ee7d3d0256e5d7d44825ab5e413c7bc1, type: 3}
   audioSource: {fileID: 7129275490261353986}
   audioClip: {fileID: 8300000, guid: bc9a193c37f170949b163cecd5e9cf69, type: 3}
-  volume: 0.246
+  volume: 0.1
   rockCollider: {fileID: 0}
 --- !u!82 &7129275490261353986
 AudioSource:
