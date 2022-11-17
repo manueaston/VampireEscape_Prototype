@@ -50,17 +50,17 @@ public class LeverScript : MonoBehaviour
             }
            
 
-            Timer = 500;
+            Timer = 200;
         }
     }
     public void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if(Input.GetKey(KeyCode.E))
-            {
+           if(Input.GetKey(KeyCode.E))
+           {
                 ChangeSprite();
-            }
+           }
             Debug.Log("Player is on " + gameObject);
         }
     }
