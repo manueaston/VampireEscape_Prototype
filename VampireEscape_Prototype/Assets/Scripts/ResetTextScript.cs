@@ -12,7 +12,7 @@ public class ResetTextScript : MonoBehaviour
     private Vector3 startPosition;
 
     // Bolder Red
-    float r = 147.0f, g = 26.0f, b = 26.0f, a = 255.0f;
+    float r = 147.0f, g = 26.0f, b = 26.0f, a = 255.0f; //Does this need to be here?
 
     void Start()
     {
