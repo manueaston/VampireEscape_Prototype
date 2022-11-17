@@ -1771,9 +1771,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 355417631630933843, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 355417631630933843, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 355417631630933843, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5264675391772150368, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
       propertyPath: m_Name
       value: Lever
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042159998992779711, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: m_Size.y
+      value: 1.1437513
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042159998992779711, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.07187563
       objectReference: {fileID: 0}
     - target: {fileID: 7425832852943203386, guid: ef8db6e64968e964ca746ed537672a39, type: 3}
       propertyPath: offSprite
