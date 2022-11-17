@@ -43,11 +43,9 @@ public class PlayerMovement : MonoBehaviour
             moving = false;
             animator.SetBool("IsWalking", false);
 
-            // create blood trail
-            if (!onBloodTrail)
+            if (MoveManager.instance.currentMoves >= MoveManager.instance.maxMoves)
             {
-                Instantiate(bloodTrail, transform.position, Quaternion.identity);
-                onBloodTrail = true;
+                Die();
             }
         }
 
@@ -57,6 +55,13 @@ public class PlayerMovement : MonoBehaviour
             // check if player is already moving, and if they have no moves left
             if (!moving)
             {
+                // create blood trail
+                if (!onBloodTrail)
+                {
+                    Instantiate(bloodTrail, transform.position, Quaternion.identity);
+                    onBloodTrail = true;
+                }
+
                 if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1.0f)
                 {
                     // for animation
@@ -86,10 +91,6 @@ public class PlayerMovement : MonoBehaviour
                     }
                 }
             }
-        }
-        else
-        {
-            Die();
         }
     }
 

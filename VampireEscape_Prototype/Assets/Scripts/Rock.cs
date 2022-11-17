@@ -27,11 +27,17 @@ public class Rock : MonoBehaviour
     {
         if (IsActive)
         {
-            IsActive = false;
-            rockCollider.enabled = false;
-            spriteRenderer.sprite = broken;
-            gameObject.layer = 0; // Layer Default
-            doorLight.enabled = true;
+            StartCoroutine(OpenDoorCoroutine());
         }
+    }
+
+    public IEnumerator OpenDoorCoroutine()
+    {
+        yield return new WaitForSeconds(0.5f);
+        IsActive = false;
+        rockCollider.enabled = false;
+        spriteRenderer.sprite = broken;
+        gameObject.layer = 0; // Layer Default
+        doorLight.enabled = true;
     }
 }
