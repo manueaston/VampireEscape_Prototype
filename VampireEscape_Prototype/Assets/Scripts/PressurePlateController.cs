@@ -13,7 +13,7 @@ public class PressurePlateController : MonoBehaviour
     //Audio Controller
     public AudioSource audioSource;
     public AudioClip audioClip;
-    [Range(0, 1)] public float volume;
+    [Range(0, 2)] public float volume;
 
 
     private UnityEngine.Rendering.Universal.Light2D Light;
@@ -36,8 +36,9 @@ public class PressurePlateController : MonoBehaviour
            SteppedOn = true;
            Debug.Log("PressurePlate stepped on trigger door/trap");
            Light.enabled = true;
+            audioSource.PlayOneShot(audioClip, volume);
 
-       }
+        }
        else if (SteppedOn)
        {
             SteppedOn = false;

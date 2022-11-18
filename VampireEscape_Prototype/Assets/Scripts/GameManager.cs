@@ -9,16 +9,12 @@ public class GameManager : MonoBehaviour
 
     public int levelMaxMoves;
 
-    //Audio Controller
-    public AudioSource audioSource;
-    public AudioClip audioClip;
-    [Range(0, 1)] public float volume;
+   
 
     void Start()
     {
         //StartCoroutine(MoveManager.instance.ScreenFadeIn());
         
-        soundHandler();
     }
 
     public void Reset()
@@ -38,12 +34,5 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void soundHandler()
-    {
-        if (!audioSource.isPlaying)
-        {
-            audioSource = GetComponent<AudioSource>();
-            audioSource.PlayOneShot(audioClip, volume);
-        }
-    }
+    
 }
