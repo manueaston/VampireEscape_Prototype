@@ -24,7 +24,7 @@ public class DoorScript : MonoBehaviour
     //Audio Controller
     public AudioSource audioSource;
     public AudioClip audioClip;
-    [Range(0, 1)] public float volume;
+    [Range(0, 4)] public float volume;
 
 
 
@@ -58,14 +58,13 @@ public class DoorScript : MonoBehaviour
         if (!isOpen)
         {
             isOpen = true;
+            audioSource.PlayOneShot(audioClip, volume);
             SpriteRenderer.sprite = OpenSprite;
             gameObject.layer = 0;
             SpriteRenderer.sortingOrder = 8;
             SpriteRenderer.sortingLayerName = "player";
-            doorLight.enabled = true; // enable light
-            audioSource.PlayOneShot(audioClip, volume);
 
-
+            StartCoroutine(DoorLight());
 
         }
         else if (isOpen)
@@ -116,5 +115,11 @@ public class DoorScript : MonoBehaviour
             OpenDoor();
             MoveTimer = defultMoveTimer;
         }
+    }
+
+    public IEnumerator DoorLight() // Delays light to match with audio clip
+    {
+        yield return new WaitForSeconds(0.8f);
+        doorLight.enabled = true; // enable light
     }
 }
