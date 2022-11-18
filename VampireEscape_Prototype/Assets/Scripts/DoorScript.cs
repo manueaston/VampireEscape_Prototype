@@ -16,6 +16,7 @@ public class DoorScript : MonoBehaviour
     public bool OnTimer = false;
     public int defultMoveTimer = -1;
     private int MoveTimer;
+    public bool dontClose = false;
     //private GameObject Object;
 
     // Door light
@@ -60,15 +61,19 @@ public class DoorScript : MonoBehaviour
             isOpen = true;
             SpriteRenderer.sprite = OpenSprite;
             gameObject.layer = 0;
-            SpriteRenderer.sortingOrder = 8;
-            SpriteRenderer.sortingLayerName = "player";
+            
             doorLight.enabled = true; // enable light
             audioSource.PlayOneShot(audioClip, volume);
+            if(!exitDoor)
+            {
+                SpriteRenderer.sortingOrder = 8;
+            SpriteRenderer.sortingLayerName = "player";
+            }
 
 
 
         }
-        else if (isOpen)
+        else if (isOpen && !dontClose)
         {
             isOpen = false;
             SpriteRenderer.sprite = ClosedSprite;
