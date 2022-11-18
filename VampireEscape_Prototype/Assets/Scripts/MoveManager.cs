@@ -35,7 +35,7 @@ public class MoveManager : MonoBehaviour
     //Audio Controller for heavy breathing
     public AudioSource audioBreathSource;
     public AudioClip audioBreathClip;
-    [Range(0, 1)] public float volumeBreath;
+    [Range(0, 2)] public float volumeBreath;
     private void Awake()
     {
         instance = this;
@@ -96,7 +96,7 @@ public class MoveManager : MonoBehaviour
             bloodMeterImage.sprite = bloodMeter[bloodMeterIndex];
 
             //these will play breathing and glass break sounds according to the animation change in the ui.
-            if(bloodMeterImage.sprite == bloodMeter[8])
+            if(bloodMeterImage.sprite == bloodMeter[7])
             {
                 audioBreathSource.PlayOneShot(audioBreathClip, volumeBreath);
             }
