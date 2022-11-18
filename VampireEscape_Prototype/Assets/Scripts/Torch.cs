@@ -15,10 +15,18 @@ public class Torch : MonoBehaviour
 
     UnityEngine.Rendering.Universal.Light2D torchLight;
 
+    //Audio Controller
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+    [Range(0, 1)] public float volume;
+
     void Start()
     {
         torchLight = GetComponent<UnityEngine.Rendering.Universal.Light2D>();
         StartCoroutine(LightFlicker());
+
+        audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(audioClip, volume);
     }
 
     IEnumerator LightFlicker()

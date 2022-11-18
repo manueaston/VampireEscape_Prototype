@@ -21,6 +21,13 @@ public class DoorScript : MonoBehaviour
     // Door light
     private UnityEngine.Rendering.Universal.Light2D doorLight;
 
+    //Audio Controller
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+    [Range(0, 1)] public float volume;
+
+
+
     public void Start()
     {
         doorLight = GetComponent<UnityEngine.Rendering.Universal.Light2D>();
@@ -28,7 +35,9 @@ public class DoorScript : MonoBehaviour
         LevelIndex = SceneManager.GetActiveScene().buildIndex;
         SpriteRenderer = GetComponent<SpriteRenderer>();
         SpriteRenderer.sprite = ClosedSprite;
-        
+
+        audioSource = GetComponent<AudioSource>();
+
         if (StayOpen)
         {
             isOpen = true;
@@ -50,9 +59,13 @@ public class DoorScript : MonoBehaviour
         {
             isOpen = true;
             SpriteRenderer.sprite = OpenSprite;
-            gameObject.layer = 1;
+            gameObject.layer = 0;
+            SpriteRenderer.sortingOrder = 8;
             doorLight.enabled = true; // enable light
-            
+            audioSource.PlayOneShot(audioClip, volume);
+
+
+
         }
         else if (isOpen)
         {
@@ -61,6 +74,7 @@ public class DoorScript : MonoBehaviour
             BoxCollider.enabled = true;
             doorLight.enabled = false; // disbale light
             gameObject.layer = 6;
+            SpriteRenderer.sortingOrder = 2;
         }
 
         if (!exitDoor && isOpen)
