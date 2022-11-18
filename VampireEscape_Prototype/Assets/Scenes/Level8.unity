@@ -966,7 +966,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2251160075180605629, guid: 2517cde58ef34924da120692419bfca7, type: 3}
       propertyPath: maxMoves
-      value: 29
+      value: 28
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2517cde58ef34924da120692419bfca7, type: 3}
