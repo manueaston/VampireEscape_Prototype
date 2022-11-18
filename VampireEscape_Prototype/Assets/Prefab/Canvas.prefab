@@ -287,7 +287,7 @@ MonoBehaviour:
   volumeGlass: 0.2
   audioBreathSource: {fileID: 3470615732639118001}
   audioBreathClip: {fileID: 8300000, guid: e12a36a053d665144a73291162b8fea5, type: 3}
-  volumeBreath: 0.2
+  volumeBreath: 0.5
 --- !u!82 &1024783723234401673
 AudioSource:
   m_ObjectHideFlags: 0
