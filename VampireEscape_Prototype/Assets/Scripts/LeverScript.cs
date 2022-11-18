@@ -13,12 +13,24 @@ public class LeverScript : MonoBehaviour
     private int Timer = 0;
     public UnityEvent InteractAction;
     public Transform TransformComponate;
-    
+
+    //Audio Controller
+    public AudioSource audioSourceOn;
+    public AudioClip audioClipOn;
+    [Range(0, 1)] public float volumeOn;
+
+    public AudioSource audioSourceOff;
+    public AudioClip audioClipOff;
+    [Range(0, 1)] public float volumeOff;
+
+
     private void Start()
     {
         TransformComponate = GetComponent<Transform>();
         SpriteRenderer = GetComponent<SpriteRenderer>();
         SpriteRenderer.sprite = offSprite;
+        audioSourceOn = GetComponent<AudioSource>();
+        audioSourceOff = GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -35,6 +47,7 @@ public class LeverScript : MonoBehaviour
 
             if (!LeverState)
             {
+                audioSourceOn.PlayOneShot(audioClipOn, volumeOn);
                 SpriteRenderer.sprite = OnSprite;
                 LeverState = true;
                 gameObject.transform.localScale = new Vector3(-1, 1, 1);
@@ -43,6 +56,7 @@ public class LeverScript : MonoBehaviour
             }
             else if (LeverState)
             {
+                audioSourceOff.PlayOneShot(audioClipOff, volumeOff);
                 SpriteRenderer.sprite = offSprite;
                 LeverState = false;
                 gameObject.transform.localScale = new Vector3(1, 1, 1);

@@ -110,7 +110,7 @@ MonoBehaviour:
   defultMoveTimer: -1
   audioSource: {fileID: 8086152893298800687}
   audioClip: {fileID: 8300000, guid: 7aed0b04729fa0045b92944180bc9fbe, type: 3}
-  volume: 0.649
+  volume: 0.861
 --- !u!61 &1095285911525377401
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -155,7 +155,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 93
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
