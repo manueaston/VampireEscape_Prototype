@@ -62,7 +62,6 @@ public class DoorScript : MonoBehaviour
             SpriteRenderer.sprite = OpenSprite;
             gameObject.layer = 0;
             
-            doorLight.enabled = true; // enable light
             audioSource.PlayOneShot(audioClip, volume);
             if(!exitDoor)
             {
@@ -70,7 +69,7 @@ public class DoorScript : MonoBehaviour
             SpriteRenderer.sortingLayerName = "player";
             }
 
-
+            StartCoroutine(DoorLightOn());
 
         }
         else if (isOpen && !dontClose)
@@ -121,5 +120,11 @@ public class DoorScript : MonoBehaviour
             OpenDoor();
             MoveTimer = defultMoveTimer;
         }
+    }
+
+    public IEnumerator DoorLightOn()
+    {
+        yield return new WaitForSeconds(0.8f);
+        doorLight.enabled = true; // enable light
     }
 }
