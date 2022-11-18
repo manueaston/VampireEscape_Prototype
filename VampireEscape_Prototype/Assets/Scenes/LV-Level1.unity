@@ -188,6 +188,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7715376e261c964daa67bf42109cbca, type: 3}
+--- !u!114 &450146559 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8175189629413135785, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
+  m_PrefabInstance: {fileID: 1468619528}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9d927e7b99ceda43a681cde9df3eaeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &470789283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -320,6 +331,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6826942841739991938, guid: 142dfbda24021254bbfe5350beef30c1, type: 3}
+      propertyPath: StayOpen
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6826942841739991938, guid: 142dfbda24021254bbfe5350beef30c1, type: 3}
+      propertyPath: dontClose
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -6826942841739991938, guid: 142dfbda24021254bbfe5350beef30c1, type: 3}
       propertyPath: OpenSprite
       value: 
@@ -3644,17 +3663,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 520552158836533399, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
+      propertyPath: isInRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 520552158836533399, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 520552158836533399, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 520552158836533399, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
+      propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 450146559}
+    - target: {fileID: 520552158836533399, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 542147750}
+      objectReference: {fileID: 450146559}
     - target: {fileID: 520552158836533399, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -3665,23 +3692,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 520552158836533399, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangeSprite
+      value: Stepped
       objectReference: {fileID: 0}
     - target: {fileID: 520552158836533399, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: OpenDoor
+      value: ChangeSprite
       objectReference: {fileID: 0}
     - target: {fileID: 520552158836533399, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: OpenDoor
       objectReference: {fileID: 0}
     - target: {fileID: 520552158836533399, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
+      propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PressurePlateController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 520552158836533399, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: DoorScript, Assembly-CSharp
+      value: PressurePlateController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 520552158836533399, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: DoorScript, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 520552158836533399, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
+      propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 520552158836533399, guid: bf3da8875b9684d42913f5a37616fe2e, type: 3}
       propertyPath: InteractAction.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
