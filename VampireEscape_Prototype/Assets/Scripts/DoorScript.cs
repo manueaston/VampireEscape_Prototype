@@ -61,6 +61,7 @@ public class DoorScript : MonoBehaviour
             SpriteRenderer.sprite = OpenSprite;
             gameObject.layer = 0;
             SpriteRenderer.sortingOrder = 8;
+            SpriteRenderer.sortingLayerName = "player";
             doorLight.enabled = true; // enable light
             audioSource.PlayOneShot(audioClip, volume);
 
@@ -75,6 +76,7 @@ public class DoorScript : MonoBehaviour
             doorLight.enabled = false; // disbale light
             gameObject.layer = 6;
             SpriteRenderer.sortingOrder = 2;
+            SpriteRenderer.sortingLayerID = 0;
         }
 
         if (!exitDoor && isOpen)
