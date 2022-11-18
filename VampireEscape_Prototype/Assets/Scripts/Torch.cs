@@ -8,7 +8,8 @@ using UnityEngine;
 public class Torch : MonoBehaviour
 {
     //added extra sprite and change to when deactivated
-
+    public SpriteRenderer spriteRenderer;
+    public Sprite torchOffSprite;
 
     public float minLightIntensity;
     public float maxLightIntensity;
@@ -25,6 +26,8 @@ public class Torch : MonoBehaviour
 
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
         torchLight = GetComponent<UnityEngine.Rendering.Universal.Light2D>();
         StartCoroutine(LightFlicker());
 
@@ -49,6 +52,8 @@ public class Torch : MonoBehaviour
         torchLight.intensity = 0;
 
         // change sprite
+        GetComponent<Animator>().enabled = false;
+        spriteRenderer.sprite = torchOffSprite;
     }
 
 
