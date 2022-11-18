@@ -52,15 +52,10 @@ public class PlayerMovement : MonoBehaviour
         // check if player has used all moves
         if (MoveManager.instance.currentMoves < MoveManager.instance.maxMoves)
         {
-            // check if player is already moving, and if they have no moves left
+            // check if player is already moving
             if (!moving)
             {
-                // create blood trail
-                if (!onBloodTrail)
-                {
-                    Instantiate(bloodTrail, transform.position, Quaternion.identity);
-                    onBloodTrail = true;
-                }
+                
 
                 if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1.0f)
                 {
@@ -89,6 +84,13 @@ public class PlayerMovement : MonoBehaviour
                         movePoint.position += new Vector3(0.0f, Input.GetAxisRaw("Vertical"), 0.0f);
                         MoveManager.instance.AddMove();
                     }
+                }
+
+                // create blood trail
+                if (!onBloodTrail)
+                {
+                    Instantiate(bloodTrail, transform.position, Quaternion.identity);
+                    onBloodTrail = true;
                 }
             }
         }
