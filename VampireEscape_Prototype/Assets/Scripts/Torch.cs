@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class Torch : MonoBehaviour
 {
+    //added extra sprite to change to
     public float minLightIntensity;
     public float maxLightIntensity;
     public float secondsBetweenFlickers;
