@@ -123,6 +123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 618179df7570f9143b6f67fca442a078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  torchOffSprite: {fileID: 21300000, guid: 9111b1698f9231742a1714f7c8cf1a14, type: 3}
   minLightIntensity: 0.7
   maxLightIntensity: 1
   secondsBetweenFlickers: 0.2
