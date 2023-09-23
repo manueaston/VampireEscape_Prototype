@@ -1,5 +1,5 @@
 # VampireEscape
-Created by Manu Easton
+Created by Manu Easton, Hyun Soo Chang, Nathan Roak Crew, Sofia Kotelevskaya, Luke Van Zuilen and Sophia Yoon
 
 <h2>About</h2>
 Final project for Game Design Principles class, Year 1, Semester 2
