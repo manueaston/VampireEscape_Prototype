@@ -14,6 +14,14 @@ Reach the end point of each level in the minimum moves possible
 
 Itch.io page: https://biya0.itch.io/crypt
 
+Contributions:
+- Player movement
+- Level creation: tilemap system
+- Puzzle elements: torch, pressure plate
+- UI programming
+- Win/loss condition
+- Level design
+
 <h2>Goal and requirements</h2>
 Create a digital game in a group of programmers and artists
 
